@@ -10,13 +10,13 @@
 <body>
     <main class="container">
 
-        <div id="homepage">
+        <section id="homepage">
             <h1>The following is a timed quiz to test your knowledge on JavaScript</h1>
             <button id="startbutton">Start</button>
             <button id="highscore" onclick="checkScore()">Check Scores</button>
-        </div>
+        </section>
 
-        <div id="Javaquiz">
+        <section id="Javaquiz">
             <div id="remaining time">Time left: </div>
                 <div id="quiz-questions"></div>
                     <button id="a" onclick="checkAnswer('a')">A</button>
@@ -24,26 +24,26 @@
                     <button id="c" onclick="checkAnswer('c')">C</button>
                     <button id="d" onclick="checkAnswer('d')">D</button>
                 <div id="checkresults"></div>
-        </div>
-        <div id="finished">
+        </section>
+        <section id="finished">
 
             <div id="score"></div>
             <input type="text" name="intials" id="initials"/>
             <button id="checkScore">Check Score</button>
-        </div>
+        </sectino>
         <div id=highscoreContainer>
-        <div id="scorepage">
+        <section id="scorepage">
             <div id="header">
                 <h3>User Initials</h3>
                 <h3>Score</h3>
             </div>
             <div id = "HSinitials"></div>
             <div id = "HSscore"></div>
-        </div>
-        <div id="finishedbutton">
+        </section>
+        <section id="finishedbutton">
             <button id="playAgain" onclick="playAgain()">Play Again</button>
             <button id="clearHighscore" onclick="clearScore()">Clear Highscores</button>
-        </div>
+        </section>
     </main>
     
     <script src="script.js"></script>
