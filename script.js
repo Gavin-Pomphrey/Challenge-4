@@ -18,8 +18,8 @@ var buttonB = document.getElementById("b");
 var buttonC = document.getElementById("c");
 var buttonD = document.getElementById("d");
 
-// Quiz question object
-var quizQuestions = [{
+
+var quiz-questions = [{
     question: "Commonly used data types do not include?",
     answerA: "Strings",
     answerB: "Booleans",
@@ -54,25 +54,21 @@ var quizQuestions = [{
     answerC: "For Loops",
     answerD: "Console.log",
     correctAnswer: "d"},  
-    
-        
-    
-    ];
-// Other global variables
-var finalQuestionIndex = quizQuestions.length;
+  ];
+
+var finalQuestionIndex = quiz-questions.length;
 var currentQuestionIndex = 0;
 var timeLeft = 75;
 var timerInterval;
 var score = 0;
 var correct;
 
-// This function cycles through the object array containing the quiz questions to generate the questions and answers.
 function generateQuizQuestion(){
     gameoverDiv.style.display = "none";
     if (currentQuestionIndex === finalQuestionIndex){
         return showScore();
     } 
-    var currentQuestion = quizQuestions[currentQuestionIndex];
+    var currentQuestion = quiz-questions[currentQuestionIndex];
     questionsEl.innerHTML = "<p>" + currentQuestion.question + "</p>";
     buttonA.innerHTML = currentQuestion.answerA;
     buttonB.innerHTML = currentQuestion.answerB;
@@ -80,13 +76,13 @@ function generateQuizQuestion(){
     buttonD.innerHTML = currentQuestion.answerD;
 };
 
-// Displays question, starts time, and hides start button.
+
 function startQuiz(){
     gameoverDiv.style.display = "none";
     startQuizDiv.style.display = "none";
     generateQuizQuestion();
 
-    //Timer
+  
     timerInterval = setInterval(function() {
         timeLeft--;
         quizTimer.textContent = "Time left: " + timeLeft;
